@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" href="js/script.js">
+        <title>E-Groceries</title>
+    </head>
+    <body id="decor">
+        <header>
+            <section id="headerNavigation">
+                <img src="assets/revou.png" id="image" width="40px" height="40px">
+                <div class="nav-navigation">
+                    <ul>
+                        <li id="left"><a href=""></a>Home</li>
+                        <li id="middle"><a href=""></a>Our Package</li>
+                        <li id="right"><a href=""></a>Call Us</li>
+                    </ul>
+                </div>
+            </section>
+            <hr>
+            <section id="headerTitle">
+                <h1 class="header">Top Rate E-Groceries Shop in Indonesia</h1>
+                <h4 class="subheader">Every Day with Best Ingredients</h4>
+            </section>
+        </header>
+        <main>
+            <section id="callUs">
+                <article id="article">
+                    <img src="assets/groceries.jpeg">
+                    <h5 class="sayur">"setiap hari beli sayur buah yang fresh di sini"</h5>
+                </article>
+                <section id="form" onsubmit="return validateForm()">
+                    <h3 class="titleSubtitle">Contact Us</h3>
+                    <h6 class="sales">Sales akan menghubungi anda 1 x 24 jam setelah data kami terima.</h6>
+                    <!-- Input name -->
+                    <div class="form-group-row">
+                        <label for="nama">Your Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" id="input" placeholder="First and last name" required>
+                        </div>
+                    </div>
+                    <!-- Input email -->
+                    <div class="form-group-row">
+                        <label for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="email" id="input" placeholder="example@email.com" required>
+                        </div>
+                    </div>
+                    <!-- Input number -->
+                    <div class="form-group-row">
+                        <label for="email">Phone Number:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="number" id="input" placeholder="+62 123-456-789" required>
+                        </div>
+                    </div>
+                    <!-- Input message -->
+                    <div class="form-group-row">
+                        <label for="email">Message:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="message" id="input" placeholder="Leave a message" required>
+                        </div>
+                    </div>
+                    <!-- Input interest -->
+                    <p class="col-sm-11"><b> What are you interested in? </b></p>
+                    <select id="interest">
+                        <option value="" disabled selected>Select option</option>
+                        <option>Pasta</option>
+                        <option>Meat</option>
+                        <option>Vegetables</option>
+                        <option>Fruits</option>
+                        <option>Snacks</option>
+                    </select><br>
+                    <!-- Submit -->
+                    <input class="submission" type="submit" value="SEND"></input>
+                </section>
+                <script>
+                    function validateForm() {
+                        var name = document.forms["message-form"]["name"].value;
+                        var email = document.forms["message-form"]["email"].value;
+                        var number = document.forms["message-form"]["gender"].value;
+                        var message = document.forms["message-form"]["message"].value;
+
+                        if (name == "" || date == "" || gender == "" || messages == "" || interest == "select option") {
+                            alert("Input tidak boleh kosong");
+                            return false;
+                        }
+
+                        document.getElementById("sender-full-name").innerText = name;
+                        document.getElementById("sender-full-name").innerText = email;
+                        document.getElementById("sender-full-name").innerText = number;
+                        document.getElementById("sender-full-name").innerText = message;
+                        return false;
+                    }
+                </script>
+            </section>
+            <section id="review">
+                <img src="assets/icon.png" width="70px" height="60px">
+                <div class="hughes">
+                    <h5 class="rumah-tangga">Florence Hughes</h5>
+                    <h6 class="florece">Ibu Rumah Tangga, 28</h6>
+                </div>
+            </section>
+            <hr class="line"> 
+            <div class="">
+                <h5 class="offer">Discover fresh produce, irresistible deals, and a delightful shopping experience at our vibrant grocery store, 
+                    where quality, variety, and friendly service come together to meet all your culinary needs!</h5>
+            </div>
+            <section class="our-view">
+                <!-- Benefit 1 -->
+                <div class="benefit">
+                    <img src="assets/nomor 1.png" width="75px" height="60px">
+                    <h5 class="value">Shop at our grocery store and experience the convenience of finding all your household essentials under one roof, 
+                    saving you time and making your life easier.</h5>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="benefit">
+                    <img src="assets/nomor 2.png" width="75px" height="60px">
+                    <h5 class="value">Discover the joy of healthy living with our wide selection of fresh, organic produce, 
+                        ensuring you and your family enjoy nutritious meals while supporting local farmers.</h5>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="benefit">
+                    <img src="assets/nomor 3.png" width="75px" height="60px">
+                    <h5 class="value">Get more value for your money at our grocery store, where competitive prices and exclusive 
+                        promotions allow you to stretch your budget without compromising on quality or taste.</h5>
+                </div>
+            </section>
+            <section id="package">
+                <h5> Our Package</h5>
+            </section>
+            <section class="paket1">
+                <!-- Vegetable -->
+                <div class="fresh1">
+                    <img src="assets/bohlam.png" width="75px" height="68px" id="bohlam">
+                    <nav>
+                        <h5 class="vegetable">Fresh Vegetables</h5>
+                        <p class="service">Sayuran segar langsung dari sumber pertanian terbaik.</p>
+                    </nav>
+                </div>
+                <!-- Fruit -->
+                <div class="fresh2">
+                    <img src="assets/bohlam.png" width="75px" height="68px" id="bohlam">
+                    <nav>
+                        <h5 class="vegetable">Fresh Fruits</h5>
+                        <p class="service">Buah lokal maupun impor dengan kualitas terbaik dengan harga yang menarik.</p>
+                    </nav>
+                </div>
+                <!-- Delivery -->
+                <div class="fresh1">
+                    <img src="assets/bohlam.png" width="75px" height="68px" id="bohlam">
+                    <nav>
+                        <h5 class="vegetable">Instant Delivery</h5>
+                        <p class="service">Di kirim instan oleh kurir yang telah di-train dengan SOP untuk menjaga kondisi belanja Anda.</p>
+                    </nav>
+                </div>
+            </section>
+            <hr id="batas1">
+            <section class="paket1">
+                <!-- Ingredient -->
+                <div class="fresh1">
+                    <img src="assets/bintang.png" width="75px" height="68px" id="bohlam">
+                    <nav>
+                        <h5 class="vegetable">Kitchen Ingredients</h5>
+                        <p class="service">Bumbu dapur lengkap untuk keperluan masak Anda.</p>
+                    </nav>
+                </div>
+                <!-- Set -->
+                <div class="fresh2">
+                    <img src="assets/bintang.png" width="75px" height="68px" id="bohlam">
+                    <nav>
+                        <h5 class="vegetable">Kitchen Set</h5>
+                        <p class="service">Berbagai jenis alat masak untuk membantu Anda masak.</p>
+                    </nav>
+                </div>
+                <!-- Bunding -->
+                <div class="fresh1">
+                    <img src="assets/bintang.png" width="75px" height="68px" id="bohlam">
+                    <nav>
+                        <h5 class="vegetable">Bunding Set</h5>
+                        <p class="service">Bingung masak apa? Sudah tersedia paket siap-masak untuk di dapur Anda.</p>
+                    </nav>
+                </div>
+            </section>
+            <hr>
+            <section id="done">
+                <h1 class="closing">Unleash the Ultimate Shopping Experience!</h1>
+                <p class="argument">At our online grocery store, we strive to redefine your shopping experience with convenience, quality, and value. 
+                    Our user-friendly website, secure payment options, and efficient customer service ensure a seamless and enjoyable experience. 
+                    Trust us to provide you with the best ingredients for a wholesome life. Visit our website today and embark on a delightful journey to a world of exceptional flavors and endless possibilities.</p>
+                <input class="call-action" type="submit" value="CALL TO ACTION"></input>
+            </section>
+            <hr>
+            <section id="bottom">
+                <img src="assets/revou.png" id="last" width="40px" height="40px">
+                <div class="policy">
+                    <p class="terms">Terms of Service</p>
+                    <p class="terms">Privacy Policy</p>
+                </div>
+                <div class="policy">
+                    <p class="terms">© 2023</p>
+                    <p class="terms">RevoU</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
