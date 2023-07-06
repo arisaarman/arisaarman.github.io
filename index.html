@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css" href="js/script.js">
+        <link rel="stylesheet" href="css/style.css">
         <title>E-Groceries</title>
     </head>
     <body id="decor">
@@ -11,11 +11,9 @@
             <section id="headerNavigation">
                 <img src="assets/revou.png" id="image" width="40px" height="40px">
                 <div class="nav-navigation">
-                    <ul>
-                        <li id="left"><a href=""></a>Home</li>
-                        <li id="middle"><a href=""></a>Our Package</li>
-                        <li id="right"><a href=""></a>Call Us</li>
-                    </ul>
+                    <button>Home</button>
+                    <button>Our Package</button>
+                    <button>Call Us</button>
                 </div>
             </section>
             <hr>
@@ -23,11 +21,14 @@
                 <h1 class="header">Top Rate E-Groceries Shop in Indonesia</h1>
                 <h4 class="subheader">Every Day with Best Ingredients</h4>
             </section>
-        </header>
+            </header>
         <main>
             <section id="callUs">
                 <article id="article">
-                    <img src="assets/groceries.jpeg">
+                    <img src="assets/groceries.jpeg", class="slider">
+                    <img src="assets/slider-1.jpg", class="slider">
+                    <img src="assets/slider-2.jpeg", class="slider">
+                    <img src="assets/slider-3.jpg", class="slider">
                     <h5 class="sayur">"setiap hari beli sayur buah yang fresh di sini"</h5>
                 </article>
                 <section id="form" onsubmit="return validateForm()">
@@ -35,31 +36,23 @@
                     <h6 class="sales">Sales akan menghubungi anda 1 x 24 jam setelah data kami terima.</h6>
                     <!-- Input name -->
                     <div class="form-group-row">
-                        <label for="nama">Your Name:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="name" id="input" placeholder="First and last name" required>
-                        </div>
+                        <label for="nameInput">Your Name:</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="First and last name" required>
                     </div>
                     <!-- Input email -->
                     <div class="form-group-row">
-                        <label for="email">Email:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="email" id="input" placeholder="example@email.com" required>
-                        </div>
+                        <label for="emailInput">Email:</label>
+                        <input type="text" class="form-control" id="emailInput" placeholder="example@email.com" required>
                     </div>
                     <!-- Input number -->
                     <div class="form-group-row">
-                        <label for="email">Phone Number:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="number" id="input" placeholder="+62 123-456-789" required>
-                        </div>
+                        <label for="numberInput">Phone Number:</label>
+                        <input type="text" class="form-control" id="numberInput" placeholder="+62 123-456-789" required>
                     </div>
                     <!-- Input message -->
                     <div class="form-group-row">
-                        <label for="email">Message:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="message" id="input" placeholder="Leave a message" required>
-                        </div>
+                        <label for="messageInput">Message:</label>
+                        <input type="text" class="form-control" id="messageInput" placeholder="Leave a message" required>
                     </div>
                     <!-- Input interest -->
                     <p class="col-sm-11"><b> What are you interested in? </b></p>
@@ -72,27 +65,8 @@
                         <option>Snacks</option>
                     </select><br>
                     <!-- Submit -->
-                    <input class="submission" type="submit" value="SEND"></input>
+                    <button type="button" id="submitButton">SEND</button>
                 </section>
-                <script>
-                    function validateForm() {
-                        var name = document.forms["message-form"]["name"].value;
-                        var email = document.forms["message-form"]["email"].value;
-                        var number = document.forms["message-form"]["gender"].value;
-                        var message = document.forms["message-form"]["message"].value;
-
-                        if (name == "" || date == "" || gender == "" || messages == "" || interest == "select option") {
-                            alert("Input tidak boleh kosong");
-                            return false;
-                        }
-
-                        document.getElementById("sender-full-name").innerText = name;
-                        document.getElementById("sender-full-name").innerText = email;
-                        document.getElementById("sender-full-name").innerText = number;
-                        document.getElementById("sender-full-name").innerText = message;
-                        return false;
-                    }
-                </script>
             </section>
             <section id="review">
                 <img src="assets/icon.png" width="70px" height="60px">
@@ -102,7 +76,7 @@
                 </div>
             </section>
             <hr class="line"> 
-            <div class="">
+            <div>
                 <h5 class="offer">Discover fresh produce, irresistible deals, and a delightful shopping experience at our vibrant grocery store, 
                     where quality, variety, and friendly service come together to meet all your culinary needs!</h5>
             </div>
@@ -188,7 +162,7 @@
                 <p class="argument">At our online grocery store, we strive to redefine your shopping experience with convenience, quality, and value. 
                     Our user-friendly website, secure payment options, and efficient customer service ensure a seamless and enjoyable experience. 
                     Trust us to provide you with the best ingredients for a wholesome life. Visit our website today and embark on a delightful journey to a world of exceptional flavors and endless possibilities.</p>
-                <input class="call-action" type="submit" value="CALL TO ACTION"></input>
+                <button type="button" id="callActionInput">CALL TO ACTION</button>
             </section>
             <hr>
             <section id="bottom">
@@ -203,5 +177,6 @@
                 </div>
             </section>
         </main>
+        <script src="js/script.js"></script>
     </body>
 </html>

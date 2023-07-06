@@ -2,37 +2,32 @@
 #headerNavigation{
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+}   
 #image{
     margin-left: 30px;
-    margin-top: 5px;
 }
-.nav-navigation ul{
+#headerNavigation > .nav-navigation {
     display: flex;
-    list-style: none;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+}
+#headerNavigation > .nav-navigation > button {
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: 0.3s background-color ease-out;
+}
+#headerNavigation > .nav-navigation > button:hover {
+    background-color: gainsboro;
+}
+#headerNavigation > .nav-navigation > button:first-child{
+    border-radius: 4px 0 0 4px;
+}
+#headerNavigation > .nav-navigation > button:last-child{
+    border-radius: 0 4px 4px 0;
+}
+.nav-navigation{
     margin-right: 20px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-.nav-navigation li{
-    padding: 10px;
-    width: 90px;
-    flex: 1;
-    text-align: center;
-    margin-left: -10px;
-}
-.nav-navigation #middle{
-    border-style: solid;
-    border-width: 0 1px;
-}
-.nav-navigation #left{
-    margin-left: -50px;
-}
-.nav-navigation #right{
-    margin-right: -10px;
 }
 #headerTitle{
     display: flex;
@@ -47,7 +42,10 @@
     font-weight: 200;
 }
 #greetings{
-    padding: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: row;
 }
 .header{
     font-family: Arial, Helvetica, sans-serif;
@@ -57,22 +55,26 @@
 #subtitle{
     color: rgb(221, 160, 221);
 }
+.slider{
+    display: block;
+    margin: auto auto;
+    margin-right: 20px;
+    border-radius: 5px;
+    height: 350px;
+    width: 550px;
+}
 
 /*MARK: Call Us Section*/
 #callUs{
     display: flex;
     flex-direction: row;
+    margin-top: -20px;
 }
 #article{
     flex-basis: 60%;
     flex-grow: 0;
     margin-left: 200px;
     margin-top: 25px;
-}
-#article img{
-    max-width: 95%;
-    max-height: 95%;
-    border-radius: 3px;
 }
 #form{
     flex-basis: 30%;
@@ -110,11 +112,9 @@
     font-size: 13px;
     font-weight: 600;
 }
-.col-sm-10{
-   margin-top: 3px;
-   font-family: Arial, Helvetica, sans-serif;
-}
 .form-control{
+    margin-top: 3px;
+    font-family: Arial, Helvetica, sans-serif;
     width: 208px;
     height: 35px;
     border-color: rgb(163, 163, 163);
@@ -139,7 +139,7 @@
     border-color: rgb(163, 163, 163);
     border-width: 2px;
 }
-.submission{
+#submitButton{
     margin-top: 30px;
     margin-left: 30px;
     width: 216px;
@@ -165,7 +165,7 @@
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 250px;
-    margin-top: -300px;
+    margin-top: -250px;
     margin-right: auto;
 }
 .rumah-tangga{
@@ -266,7 +266,7 @@
     margin-top: 100px;
     margin-bottom: 90px;
 }
-.call-action{
+#callActionInput{
     margin-top: 50px;
     margin-left: 520px;
     width: 216px;
@@ -296,4 +296,84 @@
 }
 #bottom{
     margin-bottom: 50px;
+}
+
+@media screen and (max-width: 600px){
+    #headerNavigation  {
+        margin-right: -350px;
+        margin-left: -10px;
+    }
+    hr {
+        width: 744px;
+        margin-left: -10px;
+    }
+    #headerTitle  {
+        margin-right: -350px;
+    }
+    #form  {
+        margin-right: -700px;
+        margin-left: -90px;
+        margin-top: -19px;
+        scale: 80%;;
+    }
+    .slider  {
+        scale: 70%;
+        margin-left: -240px;
+        margin-top: -29px
+    }
+    .sayur  {
+        margin-left: -160px;
+        margin-top: -40px;
+        margin-bottom: 200px;
+        scale: 90%;
+    }
+    #review  {
+        margin-left: 30px;
+        margin-top: -320px;
+        scale: 90%;
+    }
+    .line{
+        margin-right: 5px;
+        margin-left: 180px;
+    }
+    .offer{
+        margin-right: -80px;
+        margin-left: 25px;
+        scale: 90%;
+    }
+    .our-view{
+        margin-right: -80px;
+        margin-left: 20px;
+        scale: 90%;
+    }
+    #package{
+        width: 746px;
+        margin-left: -10px;
+    }
+    .paket1{
+        margin-right: -300px;
+        margin-left: 20px;
+    }
+    #batas1{
+        margin-left: 310px;
+    }
+    .closing{
+        margin-right: -250px;
+        margin-left: 120px;
+    }
+    .argument{
+        margin-right: -210px;
+        margin-left: 160px;
+        align-content: center;
+    }
+    #callActionInput{
+        margin-left: 260px;
+    }
+    #last{
+        margin-left: 340px;
+    }
+    .policy{
+        margin-left: 150px;
+        margin-right: -200px;
+    }
 }
